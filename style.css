@@ -146,11 +146,20 @@ ul {
 /* ========================================
    Container
    ======================================== */
+/* ========================================
+   Container
+   ======================================== */
 .container {
   width: 100%;
   max-width: 1100px;
   margin: 0 auto;
-  padding: 0 var(--space-xl);
+  padding: 0 var(--space-md);
+}
+
+@media (min-width: 480px) {
+  .container {
+    padding: 0 var(--space-xl);
+  }
 }
 
 /* ========================================
@@ -169,8 +178,18 @@ ul {
 
 .site-header .container {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-md) var(--space-xl);
+}
+
+@media (min-width: 640px) {
+  .site-header .container {
+    flex-direction: row;
+    gap: 0;
+  }
 }
 
 .site-title {
@@ -184,9 +203,22 @@ ul {
   color: var(--clr-primary-light);
 }
 
-.nav-list {
+/* Navigasyon cubugu */
+/* Navigasyon cubugu */
+nav ul {
   display: flex;
-  gap: var(--space-lg);
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+  gap: var(--space-md);
+  padding: 0;
+  margin: 0;
+}
+
+@media (min-width: 640px) {
+  nav ul {
+    flex-direction: row;
+  }
 }
 
 .nav-list a {
@@ -210,7 +242,13 @@ ul {
    Sections (Genel)
    ======================================== */
 .section {
-  padding: var(--space-4xl) 0;
+  padding: var(--space-3xl) 0;
+}
+
+@media (min-width: 480px) {
+  .section {
+    padding: var(--space-4xl) 0;
+  }
 }
 
 .section--dark {
@@ -218,12 +256,18 @@ ul {
 }
 
 .section-title {
-  font-size: var(--fs-3xl);
+  font-size: var(--fs-2xl);
   font-weight: 800;
   color: var(--clr-text-heading);
   margin-bottom: var(--space-2xl);
   position: relative;
   display: inline-block;
+}
+
+@media (min-width: 768px) {
+  .section-title {
+    font-size: var(--fs-3xl);
+  }
 }
 
 .section-title::after {
@@ -249,8 +293,18 @@ ul {
    ======================================== */
 .about-content {
   display: flex;
-  gap: var(--space-3xl);
+  flex-direction: column;
+  text-align: center;
+  gap: var(--space-xl);
   align-items: center;
+}
+
+@media (min-width: 768px) {
+  .about-content {
+    flex-direction: row;
+    text-align: left;
+    gap: var(--space-3xl);
+  }
 }
 
 .about-image img {
@@ -274,11 +328,23 @@ ul {
   font-size: var(--fs-lg);
 }
 
+/* Beceri Etiketleri (Toolbar) */
+/* Beceri Etiketleri (Toolbar) */
 .skills-list {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
   gap: var(--space-sm);
   margin-top: var(--space-lg);
+  padding: 0;
+  list-style: none;
+}
+
+@media (min-width: 768px) {
+  .skills-list {
+    justify-content: flex-start;
+  }
 }
 
 .skills-list li {
@@ -296,11 +362,13 @@ ul {
    ======================================== */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: var(--space-xl);
 }
 
 .project-card {
+  display: flex;
+  flex-direction: column;
   background: var(--clr-bg-card);
   border-radius: var(--radius-md);
   overflow: hidden;
@@ -333,6 +401,9 @@ ul {
 }
 
 .project-info {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
   padding: var(--space-lg);
 }
 
@@ -347,6 +418,7 @@ ul {
   font-size: var(--fs-sm);
   line-height: 1.6;
   margin-bottom: var(--space-md);
+  flex-grow: 1;
 }
 
 .project-tags {
@@ -501,47 +573,6 @@ ul {
   opacity: 0.6;
 }
 
-/* ========================================
-   Responsive
-   ======================================== */
-@media (max-width: 768px) {
-  .site-header .container {
-    flex-direction: column;
-    gap: var(--space-md);
-  }
 
-  .nav-list {
-    gap: var(--space-md);
-  }
 
-  .about-content {
-    flex-direction: column;
-    text-align: center;
-  }
 
-  .about-image img {
-    margin: 0 auto;
-  }
-
-  .skills-list {
-    justify-content: center;
-  }
-
-  .section-title {
-    font-size: var(--fs-2xl);
-  }
-
-  .projects-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 480px) {
-  .container {
-    padding: 0 var(--space-md);
-  }
-
-  .section {
-    padding: var(--space-3xl) 0;
-  }
-}
