@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+/* ========================================
+   Tailwind CSS v4 — @theme Design Tokens
+   ======================================== */
+@theme {
+    /* ---- Renk Paleti (Color Palette) ---- */
+    --color-primary: #6c5ce7;
+    --color-primary-dark: #5a4bd1;
+    --color-primary-light: #a29bfe;
+    --color-secondary: #00cec9;
+    --color-secondary-dark: #00b5b0;
+
+    --color-bg: #0f0f1a;
+    --color-bg-secondary: #1a1a2e;
+    --color-bg-card: #16213e;
+
+    --color-text: #e4e4ed;
+    --color-text-muted: #9d9daf;
+    --color-text-heading: #ffffff;
+
+    --color-error: #ff6b6b;
+    --color-success: #2ecc71;
+    --color-warning: #f39c12;
+    --color-info: #3498db;
+
+    --color-focus: #ffd700;
+
+    /* ---- Yazı Tipleri (Fonts) ---- */
+    --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+
+    /* ---- Border Radius ---- */
+    --radius-xs: 4px;
+    --radius-sm: 6px;
+    --radius-md: 12px;
+    --radius-lg: 20px;
+    --radius-full: 9999px;
+}
+
+/* ========================================
+   Global Styles
+   ======================================== */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+body {
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* ========================================
+   Dark Mode Default + Light overrides
+   Sayfa varsayılan olarak koyu tema ile açılır.
+   ======================================== */
+
+/* Aydınlık tema (light) için override'lar — class="light" html'e eklenince aktif olur */
