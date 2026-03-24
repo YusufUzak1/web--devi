@@ -1,6 +1,11 @@
 @import "tailwindcss";
 
 /* ========================================
+   Dark Mode: class tabanlı (.dark) geçiş
+   ======================================== */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ========================================
    Tailwind CSS v4 — @theme Design Tokens
    ======================================== */
 @theme {
