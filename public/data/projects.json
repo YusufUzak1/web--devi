@@ -1,0 +1,52 @@
+[
+  {
+    "id": "1",
+    "title": "E-commerce Platform",
+    "description": "A full-stack e-commerce solution with cart and checkout.",
+    "tech": ["React", "Node.js", "MongoDB"],
+    "year": 2023,
+    "category": "Web",
+    "featured": true,
+    "image": "https://via.placeholder.com/400x250?text=E-commerce"
+  },
+  {
+    "id": "2",
+    "title": "Portfolio Website",
+    "description": "A personal portfolio to showcase projects and skills.",
+    "tech": ["React", "Tailwind CSS"],
+    "year": 2024,
+    "category": "Web",
+    "featured": false,
+    "image": "https://via.placeholder.com/400x250?text=Portfolio"
+  },
+  {
+    "id": "3",
+    "title": "Task Management App",
+    "description": "A productivity app with drag-and-drop features.",
+    "tech": ["Vue", "Firebase"],
+    "year": 2022,
+    "category": "Mobile",
+    "featured": true,
+    "image": "https://via.placeholder.com/400x250?text=Task+App"
+  },
+  {
+    "id": "4",
+    "title": "Weather Dashboard",
+    "description": "Real-time weather data visualization using an external API.",
+    "tech": ["JavaScript", "HTML", "CSS"],
+    "year": 2023,
+    "category": "Web",
+    "featured": false,
+    "image": "https://via.placeholder.com/400x250?text=Weather"
+  },
+  {
+    "id": "5",
+    "title": "Crypto Tracker",
+    "description": "Tracking cryptocurrency prices and market trends.",
+    "tech": ["React Native", "Redux"],
+    "year": 2024,
+    "category": "Mobile",
+    "featured": true,
+    "image": "https://via.placeholder.com/400x250?text=Crypto"
+  }
+]
